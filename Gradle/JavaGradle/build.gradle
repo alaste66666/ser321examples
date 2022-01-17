@@ -21,7 +21,7 @@ task runApp(type: JavaExec) {
 
 // task which will run Main with default parameters, 
 // but also accepts new parameter this time with given names
-// Example: gradle runAppAgain -=9 -Pnum2=10
+// Example: gradle runAppAgain -Pnum1=9 -Pnum2=10
 // Example2 (this will make Gradle run more quietly in the console):
 //   gradle runAppAgain -Pnum1=9 -Pnum2=10 -q --console=plain 
 task runAppAgain(type: JavaExec) {
