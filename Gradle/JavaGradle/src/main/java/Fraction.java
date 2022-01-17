@@ -43,14 +43,31 @@ public class Fraction {
          // Fraction *frac = [[Fraction alloc] init];
          Fraction frac = new Fraction();
 
-         // set the values
-         frac.setNumerator(1);
-         frac.setDenominator(3);
+         if (args.length == 2) {
+            int num=Integer.parseInt(args[0]);
+            int denom=Integer.parseInt(args[1]);
+            if (denom==0){
+               System.out.println("Argument2 can not be zero");
+               System.exit(1);
+            }else{
+                           frac.setNumerator(num);
+                           frac.setDenominator(denom);
+                           System.out.print("The fraction is: ");
+            frac.print();
+            System.out.println("");
+            }
+         }else{
+               
 
-         // print it
-         System.out.print("The fraction is: ");
-         frac.print();
-         System.out.println("");
+            // set the values
+            frac.setNumerator(1);
+            frac.setDenominator(3);
+
+            // print it
+            System.out.print("The fraction is: ");
+            frac.print();
+            System.out.println("");
+         }
 
       }catch(Exception e) {
          e.printStackTrace();
